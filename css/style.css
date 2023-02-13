@@ -1,0 +1,213 @@
+@import './bootstrap.css';
+@import'./font-awesome.css';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+:root{
+    --pale-violet: hsl(276, 100%, 81%);
+    --moderate-violet: hsl(276, 55%, 52%);
+    --dark-violet: hsl(271, 15%, 43%);
+    --grayish-blue: hsl(206, 6%, 79%);
+    --very-dark-violet: hsl(271, 36%, 24%);
+    --dark-grayish-violet: hsl(270, 7%, 64%);
+    /* #### Gradients */
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+
+    /* secondary */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --very-Dark-Desaturated-Violet : hsl(271, 36%, 24%);
+    --very-Light-Magenta : hsl(289, 100%, 72%);
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};
+button,
+input,
+textarea,
+select{
+    font: inherit;
+    border: none;
+}
+h1,h2,h3,h4,h5,h6,p{
+    overflow-wrap: break-word;
+    margin: 0;
+}
+ol,ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img,picture,video,canvas,svg{
+    max-inline-size: 100%;
+    block-size: auto;
+}
+.sr-only{
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+/* layout */
+body{
+    font-family: 'Rubik',  sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+#bg-img{
+    min-height: calc(65vh + 30px);
+    width: calc(45vw + 30px);
+    background: linear-gradient(380deg, var(--moderate-violet) 35%, var(--light-magenta) 100%);
+    border-radius: 0 0 46% 46%;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+    position: absolute;
+    left: -50px;
+    top: -20px;
+}
+.chat{
+    min-height: 100vh;
+}
+/* <-----card----> */
+.card{
+    padding: 10px;
+    border: none;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(0 0 0 / 10%);
+    border-radius: 30px;
+}
+/* <------card-title------> */
+.card-title{
+    background: linear-gradient(90deg, var(--light-violet) 35%, var(--light-magenta) 100%);
+    padding: 20px 15px 10px 15px;
+    border-radius: 30px 30px 10px 10px;
+    color: var(--white);
+    font-size: 12px;
+    margin: 0;
+}
+.mobile-top{
+    width: 150px;
+    position: absolute;
+    background: var(--white);
+    height: 25px;
+    border-radius: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0.5rem 0.5rem 0.5rem rgb(0 0 0 / 10%);
+}
+.profile-img{
+    height: 35px;
+    border: 2px solid var(--white);
+}
+.profile-name small{
+    color: var(--dark-grayish-violet);
+}
+.menu-icon{
+    height: 20px;
+}
+/* <------card-body-------> */
+.card-body{
+    background-color: var(--light-grayish-violet);
+    font-size: 12px;
+}
+form{
+    background: linear-gradient(90deg, var(--light-magenta) 35%, var(--light-violet) 100%);
+    margin-bottom: 0.5rem;
+    border-radius: 20px 20px 20px 5px ;
+    padding: 0.5rem 1rem;
+    color: var(--white);
+    width: 190px;
+}
+input[type=radio] {
+    -webkit-appearance: none;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        outline: none;
+        border: 1px solid var(--grayish-blue);  
+}
+input[type='radio']:before {
+    background: green;
+}
+.card-body p{
+    width: 190px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 20px 20px 20px 5px ;
+    color: var(--moderate-violet);
+    background-color: hsl(270deg 9% 90%);
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.right-text{
+    width: 120px !important;
+}
+.dog-imgs img{
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+}
+.right p{
+    width: 190px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 20px 20px 5px 20px ;
+    color: var(--dark-violet);
+    background-color: var(--white);
+}
+/* simple  */
+.simple h2{
+    color: var(--very-Dark-Desaturated-Violet);
+}
+.simple p{
+    color: var(--dark-grayish-violet);
+}
+.bottom{
+    position: relative;
+}
+.bottom-icon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: var(--very-Dark-Desaturated-Violet);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: var(--white);
+}
+
+@media screen and (max-width:758px) {
+    .card-body{
+        font-size: 10px;
+    }
+    .card-body p{
+        width: 170px;
+    }
+    .simple{
+        text-align: center;
+    }
+
+    #bg-img{
+        min-height: calc(50vh + 30px);
+        width: calc(60vw + 30px);
+    }
+}
+@media (max-width:375px) {
+       .chat{
+        min-height: calc(100vh + 30vh);
+    }
+}
