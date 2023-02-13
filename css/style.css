@@ -107,6 +107,9 @@ body{
     height: 35px;
     border: 2px solid var(--white);
 }
+.profile-name h2{
+    font-size: 16px;
+}
 .profile-name small{
     color: var(--dark-grayish-violet);
 }
